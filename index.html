@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Happy Birthday Gunduli 💖</title>
+<style>
+:root{--pink:#ff4d6d;--soft:#fff0f3;--dark:#2d3142}
+*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,Segoe UI,sans-serif;background:linear-gradient(135deg,#fff0f3,#ffe0e8);color:var(--dark);text-align:center;overflow-x:hidden}
+.modal{position:fixed;inset:0;background:#fff0f3;display:grid;place-items:center;z-index:10;padding:25px}.modal div{max-width:520px}.btn{border:0;border-radius:999px;padding:14px 24px;background:var(--pink);color:#fff;font-weight:800;font-size:1rem;cursor:pointer;box-shadow:0 10px 25px #ff4d6d55}
+main{max-width:900px;margin:auto;padding:35px 18px 80px}h1{font-size:clamp(2rem,8vw,4rem);color:var(--pink);margin:10px}.sub{font-size:1.1rem;color:#6c757d}
+.card{background:#fff;border:3px solid #ffcbd5;border-radius:28px;padding:24px;margin:25px auto;box-shadow:0 12px 30px #ff4d6d22}
+.couple{height:300px;position:relative;display:grid;place-items:center}.giraffe,.panda{position:absolute;animation:float 2.2s ease-in-out infinite}.giraffe{left:27%;top:25px}.panda{right:25%;top:145px;animation-delay:.3s}.head{border-radius:50%;width:75px;height:65px;background:#fff;border:3px solid #2d3142;position:relative}.panda .head{background:#fff}.ear{position:absolute;width:22px;height:22px;background:#2d3142;border-radius:50%;top:-8px}.e1{left:2px}.e2{right:2px}.eye{position:absolute;width:10px;height:14px;background:#2d3142;border-radius:50%;top:25px}.eye.l{left:18px}.eye.r{right:18px}.body{width:90px;height:80px;border-radius:45% 45% 35% 35%;background:#f9bc60;border:2px solid #c47a32;margin:-4px auto 0}.panda .body{background:#fff;border:3px solid #2d3142}.neck{width:28px;height:125px;background:#f9bc60;border:2px solid #c47a32;margin:auto}.spot{width:10px;height:10px;background:#c47a32;border-radius:50%;position:absolute}.heart{font-size:35px;color:var(--pink);animation:heart 1.8s infinite}
+@keyframes float{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-10px) rotate(2deg)}}@keyframes heart{50%{transform:scale(1.3)}}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:15px}.reason{text-align:left;padding:18px;background:#fff8fa;border-radius:18px}.cake{font-size:90px;cursor:pointer}.jokes button{margin:6px;background:#ffe0e8;color:var(--pink);border:2px dashed var(--pink);border-radius:15px;padding:11px;font-weight:700}.final{min-height:360px;display:grid;place-items:center;background:radial-gradient(circle,#fff,#ffd1dc);position:relative;overflow:hidden}.fire{font-size:45px;animation:boom 1.5s infinite}.final h2{font-size:clamp(2rem,9vw,5rem);color:var(--pink);margin:5px}.music{position:fixed;right:15px;bottom:15px;z-index:5;background:white;color:var(--pink);border:2px solid var(--pink);border-radius:999px;padding:10px 16px;font-weight:800}
+</style>
+</head>
+<body>
+<div class="modal" id="welcome"><div><div class="heart">♥</div><h1>For My Gunduli 💖</h1><p>Something small, cute and made just for you…</p><button class="btn" onclick="start()">Open Your Birthday Surprise 🎁</button></div></div>
+<main>
+<h1>Happy Birthday, Gunduli! 🐼🦒❤️</h1><p class="sub">To the cutest, fiercest little girl who owns the Giraffe's heart.</p>
+<section class="card"><div class="couple">
+<div class="giraffe"><div class="neck"></div><div class="head"><i class="eye l"></i><i class="eye r"></i></div><div class="body"></div></div>
+<div class="panda"><div class="head"><span class="ear e1"></span><span class="ear e2"></span><i class="eye l"></i><i class="eye r"></i></div><div class="body"></div></div>
+<div class="heart">♥</div></div><p><b>The tall calm Ziraaf & his tiny, adorably energetic Panda forever! 🦒💕🐼</b></p></section>
+<section class="card"><h2>🎂 Make a Birthday Wish</h2><div class="cake" onclick="wish()">🎂</div><p id="wish">Tap the cake! ✨</p></section>
+<section class="card jokes"><h2>Gunduli's Special Investigation Bureau 🕵️‍♀️</h2><button onclick="j('🐾 Bouncing Walk: scientifically proven to make Ziraaf smile.')">Bouncing Walk 🐾</button><button onclick="j('💢 Angry Mode: 0.1% scary, 100% cute.')">Angry Mode 💢</button><button onclick="j('🔋 Hangout Stamina: apparently unlimited.')">Hangout Stamina 🔋</button><button onclick="j('🍟 One bite = 80% of my fries. Still worth it.')">My French Fries 🍟</button><p id="joke">Click one… 😌</p></section>
+<section class="card"><h2>6 Little Things I Love About You 💌</h2><div class="grid">
+<div class="reason"><h3>1. That Cute Bouncing Walk</h3><p>Your cheerful little bounce instantly brightens my world.</p></div>
+<div class="reason"><h3>2. Your Tiny Angry Tantrums</h3><p>You try to look scary, but somehow become even cuter.</p></div>
+<div class="reason"><h3>3. Endless Hangout Energy</h3><p>Every ordinary street becomes an adventure with you.</p></div>
+<div class="reason"><h3>4. Your Pure Heart</h3><p>Behind every cute drama is the warmest heart.</p></div>
+<div class="reason"><h3>5. That Contagious Laugh</h3><p>Your laugh is one of my favorite sounds in the universe.</p></div>
+<div class="reason"><h3>6. Just Being My Gunduli</h3><p>Loving you is effortless, and having you is my blessing.</p></div>
+</div></section>
+<section class="card final"><div><div class="fire">🎆 💥 🎇 💖 🎆</div><h2>Happy Birthday, Gunduli! ❤️</h2><p>May your smile stay this bright, your heart stay this happy, and may we keep making beautiful little memories together. 💕</p><div class="fire">💖 🎆 💥 🎇 💖</div></div></section>
+</main>
+<button class="music" onclick="toggleMusic()" id="musicBtn">🎵 Music: OFF</button>
+<audio id="song" preload="auto" playsinline><source src="https://drive.google.com/uc?export=download&id=1rdapeErJwae-DKk8g6mK27Uez0ZNfTr3" type="audio/mpeg"></audio>
+<script>
+const song=document.getElementById('song');function start(){document.getElementById('welcome').style.display='none';play();}function play(){song.play().then(()=>musicBtn.textContent='🎵 Music: ON').catch(()=>{});}function toggleMusic(){if(song.paused)play();else{song.pause();musicBtn.textContent='🎵 Music: OFF'}}function wish(){document.getElementById('wish').textContent='✨ Wish sent to the stars! Happy Birthday, my Panda! ❤️🎉';document.body.animate([{filter:'brightness(1)'},{filter:'brightness(1.15)'},{filter:'brightness(1)'}],700)}function j(t){document.getElementById('joke').textContent=t}
+</script>
+</body></html>
