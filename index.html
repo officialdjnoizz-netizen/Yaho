@@ -5,26 +5,74 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Happy Birthday Gunduli 💖</title>
 <style>
-:root{--pink:#ff4d6d;--soft:#fff0f3;--dark:#2d3142}
-*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,Segoe UI,sans-serif;background:linear-gradient(135deg,#fff0f3,#ffe0e8);color:var(--dark);text-align:center;overflow-x:hidden}
-.modal{position:fixed;inset:0;background:#fff0f3;display:grid;place-items:center;z-index:10;padding:25px}.modal div{max-width:520px}.btn{border:0;border-radius:999px;padding:14px 24px;background:var(--pink);color:#fff;font-weight:800;font-size:1rem;cursor:pointer;box-shadow:0 10px 25px #ff4d6d55}
-main{max-width:900px;margin:auto;padding:35px 18px 80px}h1{font-size:clamp(2rem,8vw,4rem);color:var(--pink);margin:10px}.sub{font-size:1.1rem;color:#6c757d}
-.card{background:#fff;border:3px solid #ffcbd5;border-radius:28px;padding:24px;margin:25px auto;box-shadow:0 12px 30px #ff4d6d22}
-.couple{height:300px;position:relative;display:grid;place-items:center}.giraffe,.panda{position:absolute;animation:float 2.2s ease-in-out infinite}.giraffe{left:27%;top:25px}.panda{right:25%;top:145px;animation-delay:.3s}.head{border-radius:50%;width:75px;height:65px;background:#fff;border:3px solid #2d3142;position:relative}.panda .head{background:#fff}.ear{position:absolute;width:22px;height:22px;background:#2d3142;border-radius:50%;top:-8px}.e1{left:2px}.e2{right:2px}.eye{position:absolute;width:10px;height:14px;background:#2d3142;border-radius:50%;top:25px}.eye.l{left:18px}.eye.r{right:18px}.body{width:90px;height:80px;border-radius:45% 45% 35% 35%;background:#f9bc60;border:2px solid #c47a32;margin:-4px auto 0}.panda .body{background:#fff;border:3px solid #2d3142}.neck{width:28px;height:125px;background:#f9bc60;border:2px solid #c47a32;margin:auto}.spot{width:10px;height:10px;background:#c47a32;border-radius:50%;position:absolute}.heart{font-size:35px;color:var(--pink);animation:heart 1.8s infinite}
-@keyframes float{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-10px) rotate(2deg)}}@keyframes heart{50%{transform:scale(1.3)}}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:15px}.reason{text-align:left;padding:18px;background:#fff8fa;border-radius:18px}.cake{font-size:90px;cursor:pointer}.jokes button{margin:6px;background:#ffe0e8;color:var(--pink);border:2px dashed var(--pink);border-radius:15px;padding:11px;font-weight:700}.final{min-height:360px;display:grid;place-items:center;background:radial-gradient(circle,#fff,#ffd1dc);position:relative;overflow:hidden}.fire{font-size:45px;animation:boom 1.5s infinite}.final h2{font-size:clamp(2rem,9vw,5rem);color:var(--pink);margin:5px}.music{position:fixed;right:15px;bottom:15px;z-index:5;background:white;color:var(--pink);border:2px solid var(--pink);border-radius:999px;padding:10px 16px;font-weight:800}
+:root{--pink:#ff4d6d;--soft:#fff0f3;--ink:#3a2f35;--gold:#e9a23b}
+*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,Segoe UI,sans-serif;background:linear-gradient(135deg,#fff4f6,#ffe2ea);color:var(--ink);text-align:center;overflow-x:hidden}
+.modal{position:fixed;inset:0;background:rgba(255,244,246,.98);display:grid;place-items:center;z-index:20;padding:24px}.modal>div{max-width:520px}.btn,.music{border:0;border-radius:999px;padding:14px 22px;background:var(--pink);color:#fff;font-weight:800;cursor:pointer;box-shadow:0 10px 25px #ff4d6d44}.modal p{color:#6d6268}
+main{max-width:950px;margin:auto;padding:32px 16px 80px}h1{font-size:clamp(2.1rem,8vw,4.5rem);color:var(--pink);margin:12px}.sub{font-size:1.08rem;color:#6d6268}
+.card{background:#fff;border:3px solid #ffcbd5;border-radius:28px;padding:24px;margin:24px auto;box-shadow:0 12px 30px #ff4d6d1c}.scene{position:relative;height:340px;overflow:hidden;border-radius:22px;background:linear-gradient(#fff9fa,#fff1f5)}
+.couple-svg{width:min(100%,760px);height:100%;display:block;margin:auto}.giraffe-sway{transform-origin:145px 265px;animation:sway 3s ease-in-out infinite}.panda-bounce{transform-origin:315px 285px;animation:bounce 2.2s ease-in-out infinite}.float-heart{animation:heart 1.7s ease-in-out infinite}
+@keyframes sway{0%,100%{transform:rotate(-2deg) translateY(0)}50%{transform:rotate(2deg) translateY(-7px)}}@keyframes bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}@keyframes heart{50%{transform:scale(1.25)}}
+.cake{font-size:92px;cursor:pointer;user-select:none;transition:transform .2s}.cake:active{transform:scale(.9)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}.reason{text-align:left;padding:18px;background:#fff8fa;border-radius:18px}.jokes button{margin:6px;background:#ffe0e8;color:var(--pink);border:2px dashed var(--pink);border-radius:15px;padding:11px;font-weight:700;cursor:pointer}
+.final{min-height:380px;display:grid;place-items:center;background:radial-gradient(circle,#fff,#ffd1dc);position:relative;overflow:hidden}.fire{font-size:42px;animation:boom 1.5s infinite}.final h2{font-size:clamp(2.2rem,9vw,5rem);color:var(--pink);margin:6px}@keyframes boom{50%{transform:scale(1.18);opacity:.7}}
+.music{position:fixed;right:15px;bottom:15px;z-index:30;background:#fff;color:var(--pink);border:2px solid var(--pink);padding:10px 16px}
+.status{font-size:.9rem;color:#8b747d;min-height:22px}
+@media(max-width:600px){.scene{height:300px}.music{right:10px;bottom:10px}}
 </style>
 </head>
 <body>
-<div class="modal" id="welcome"><div><div class="heart">♥</div><h1>For My Gunduli 💖</h1><p>Something small, cute and made just for you…</p><button class="btn" onclick="start()">Open Your Birthday Surprise 🎁</button></div></div>
+<div class="modal" id="welcome">
+  <div><div style="font-size:55px;color:var(--pink);animation:heart 1.7s infinite">♥</div>
+  <h1>For My Gunduli 💖</h1><p>Something small, cute and made just for you…</p>
+  <button class="btn" onclick="startSurprise()">Open Your Birthday Surprise 🎁</button>
+  <p id="musicStatus" class="status">Music will start when you open the surprise.</p></div>
+</div>
+
 <main>
-<h1>Happy Birthday, Gunduli! 🐼🦒❤️</h1><p class="sub">To the cutest, fiercest little girl who owns the Giraffe's heart.</p>
-<section class="card"><div class="couple">
-<div class="giraffe"><div class="neck"></div><div class="head"><i class="eye l"></i><i class="eye r"></i></div><div class="body"></div></div>
-<div class="panda"><div class="head"><span class="ear e1"></span><span class="ear e2"></span><i class="eye l"></i><i class="eye r"></i></div><div class="body"></div></div>
-<div class="heart">♥</div></div><p><b>The tall calm Ziraaf & his tiny, adorably energetic Panda forever! 🦒💕🐼</b></p></section>
+<h1>Happy Birthday, Gunduli! 🐼🦒❤️</h1>
+<p class="sub">To the cutest, fiercest little girl who owns the Giraffe's heart.</p>
+
+<section class="card">
+<div class="scene">
+<svg class="couple-svg" viewBox="0 0 520 340" aria-label="Cute romantic giraffe and panda">
+<g class="giraffe-sway">
+<ellipse cx="150" cy="310" rx="72" ry="14" fill="#f3cbd4" opacity=".45"/>
+<path d="M116 275 C108 230 111 185 119 145 L125 72 Q128 52 145 52 Q162 52 165 72 L170 145 C178 186 181 231 174 275Z" fill="#f6c86e" stroke="#8c5a2f" stroke-width="4"/>
+<circle cx="133" cy="102" r="9" fill="#b77a3e"/><circle cx="155" cy="155" r="10" fill="#b77a3e"/><circle cx="130" cy="205" r="11" fill="#b77a3e"/><circle cx="158" cy="250" r="9" fill="#b77a3e"/>
+<path d="M112 72 Q92 55 101 40 Q112 26 128 42 L140 54" fill="#f6c86e" stroke="#8c5a2f" stroke-width="4"/>
+<path d="M165 72 Q184 55 176 40 Q166 26 150 42 L140 54" fill="#f6c86e" stroke="#8c5a2f" stroke-width="4"/>
+<path d="M116 78 Q112 32 140 25 Q168 32 165 78 Q157 98 140 100 Q123 98 116 78Z" fill="#f6c86e" stroke="#8c5a2f" stroke-width="4"/>
+<circle cx="129" cy="67" r="5" fill="#3a2f35"/><circle cx="151" cy="67" r="5" fill="#3a2f35"/>
+<circle cx="140" cy="81" r="4" fill="#3a2f35"/><path d="M131 88 Q140 96 149 88" fill="none" stroke="#3a2f35" stroke-width="3" stroke-linecap="round"/>
+<path d="M140 25V10" stroke="#8c5a2f" stroke-width="5"/><circle cx="138" cy="8" r="6" fill="#8c5a2f"/><path d="M140 25V10" stroke="#8c5a2f" stroke-width="5"/><circle cx="142" cy="8" r="6" fill="#8c5a2f"/>
+<path d="M112 170 Q88 188 77 210" fill="none" stroke="#8c5a2f" stroke-width="10" stroke-linecap="round"/><path d="M170 170 Q195 185 207 204" fill="none" stroke="#8c5a2f" stroke-width="10" stroke-linecap="round"/>
+</g>
+
+<g class="panda-bounce">
+<ellipse cx="345" cy="310" rx="72" ry="14" fill="#f3cbd4" opacity=".45"/>
+<ellipse cx="345" cy="245" rx="62" ry="72" fill="#fff" stroke="#2f2b30" stroke-width="5"/>
+<circle cx="345" cy="165" r="65" fill="#fff" stroke="#2f2b30" stroke-width="5"/>
+<circle cx="300" cy="125" r="22" fill="#2f2b30"/><circle cx="390" cy="125" r="22" fill="#2f2b30"/>
+<ellipse cx="319" cy="163" rx="18" ry="28" fill="#2f2b30" transform="rotate(25 319 163)"/><ellipse cx="371" cy="163" rx="18" ry="28" fill="#2f2b30" transform="rotate(-25 371 163)"/>
+<circle cx="320" cy="162" r="6" fill="#fff"/><circle cx="370" cy="162" r="6" fill="#fff"/>
+<circle cx="345" cy="180" r="7" fill="#2f2b30"/><path d="M332 192 Q345 203 358 192" fill="none" stroke="#2f2b30" stroke-width="4" stroke-linecap="round"/>
+<path d="M292 230 Q265 248 260 275" fill="none" stroke="#2f2b30" stroke-width="14" stroke-linecap="round"/><path d="M398 230 Q425 248 430 275" fill="none" stroke="#2f2b30" stroke-width="14" stroke-linecap="round"/>
+<path d="M319 295 Q345 280 371 295" fill="none" stroke="#2f2b30" stroke-width="12" stroke-linecap="round"/>
+</g>
+<text x="245" y="95" font-size="42" fill="#ff4d6d" class="float-heart">♥</text>
+</svg>
+</div>
+<p><b>The tall calm Ziraaf & his tiny, adorably energetic Panda forever! 🦒💕🐼</b></p>
+</section>
+
 <section class="card"><h2>🎂 Make a Birthday Wish</h2><div class="cake" onclick="wish()">🎂</div><p id="wish">Tap the cake! ✨</p></section>
-<section class="card jokes"><h2>Gunduli's Special Investigation Bureau 🕵️‍♀️</h2><button onclick="j('🐾 Bouncing Walk: scientifically proven to make Ziraaf smile.')">Bouncing Walk 🐾</button><button onclick="j('💢 Angry Mode: 0.1% scary, 100% cute.')">Angry Mode 💢</button><button onclick="j('🔋 Hangout Stamina: apparently unlimited.')">Hangout Stamina 🔋</button><button onclick="j('🍟 One bite = 80% of my fries. Still worth it.')">My French Fries 🍟</button><p id="joke">Click one… 😌</p></section>
+<section class="card jokes"><h2>Gunduli's Special Investigation Bureau 🕵️‍♀️</h2>
+<button onclick="j('🐾 Bouncing Walk: scientifically proven to make Ziraaf smile.')">Bouncing Walk 🐾</button>
+<button onclick="j('💢 Angry Mode: 0.1% scary, 100% cute.')">Angry Mode 💢</button>
+<button onclick="j('🔋 Hangout Stamina: apparently unlimited.')">Hangout Stamina 🔋</button>
+<button onclick="j('🍟 One bite = 80% of my fries. Still worth it.')">My French Fries 🍟</button>
+<p id="joke">Click one… 😌</p></section>
+
 <section class="card"><h2>6 Little Things I Love About You 💌</h2><div class="grid">
 <div class="reason"><h3>1. That Cute Bouncing Walk</h3><p>Your cheerful little bounce instantly brightens my world.</p></div>
 <div class="reason"><h3>2. Your Tiny Angry Tantrums</h3><p>You try to look scary, but somehow become even cuter.</p></div>
@@ -33,11 +81,41 @@ main{max-width:900px;margin:auto;padding:35px 18px 80px}h1{font-size:clamp(2rem,
 <div class="reason"><h3>5. That Contagious Laugh</h3><p>Your laugh is one of my favorite sounds in the universe.</p></div>
 <div class="reason"><h3>6. Just Being My Gunduli</h3><p>Loving you is effortless, and having you is my blessing.</p></div>
 </div></section>
+
 <section class="card final"><div><div class="fire">🎆 💥 🎇 💖 🎆</div><h2>Happy Birthday, Gunduli! ❤️</h2><p>May your smile stay this bright, your heart stay this happy, and may we keep making beautiful little memories together. 💕</p><div class="fire">💖 🎆 💥 🎇 💖</div></div></section>
 </main>
-<button class="music" onclick="toggleMusic()" id="musicBtn">🎵 Music: OFF</button>
-<audio id="song" preload="auto" playsinline><source src="https://drive.google.com/uc?export=download&id=1rdapeErJwae-DKk8g6mK27Uez0ZNfTr3" type="audio/mpeg"></audio>
+
+<button class="music" onclick="toggleMusic()" id="musicBtn">🎵 Play Music</button>
+<audio id="song" preload="auto" playsinline crossorigin="anonymous">
+  <source src="https://drive.google.com/uc?export=download&id=1rdapeErJwae-DKk8g6mK27Uez0ZNfTr3" type="audio/mpeg">
+</audio>
+
 <script>
-const song=document.getElementById('song');function start(){document.getElementById('welcome').style.display='none';play();}function play(){song.play().then(()=>musicBtn.textContent='🎵 Music: ON').catch(()=>{});}function toggleMusic(){if(song.paused)play();else{song.pause();musicBtn.textContent='🎵 Music: OFF'}}function wish(){document.getElementById('wish').textContent='✨ Wish sent to the stars! Happy Birthday, my Panda! ❤️🎉';document.body.animate([{filter:'brightness(1)'},{filter:'brightness(1.15)'},{filter:'brightness(1)'}],700)}function j(t){document.getElementById('joke').textContent=t}
+const song=document.getElementById('song');
+const musicBtn=document.getElementById('musicBtn');
+const musicStatus=document.getElementById('musicStatus');
+
+async function playMusic(){
+  try{
+    song.load();
+    await song.play();
+    musicBtn.textContent='🎵 Music: ON';
+    musicStatus.textContent='Music is playing 💕';
+  }catch(e){
+    musicBtn.textContent='🎵 Tap to Play Music';
+    musicStatus.textContent='Tap the Music button once if your browser blocked autoplay.';
+  }
+}
+function startSurprise(){
+  document.getElementById('welcome').style.display='none';
+  playMusic();
+}
+function toggleMusic(){
+  if(song.paused) playMusic();
+  else {song.pause();musicBtn.textContent='🎵 Music: OFF';musicStatus.textContent='Music paused.';}
+}
+song.addEventListener('error',()=>{musicStatus.textContent='The music file could not be loaded. Please check the Google Drive sharing permission.';});
+function wish(){document.getElementById('wish').textContent='✨ Wish sent to the stars! Happy Birthday, my Panda! ❤️🎉';document.body.animate([{filter:'brightness(1)'},{filter:'brightness(1.15)'},{filter:'brightness(1)'}],700)}
+function j(t){document.getElementById('joke').textContent=t}
 </script>
 </body></html>
