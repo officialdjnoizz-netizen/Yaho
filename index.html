@@ -3,119 +3,245 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Happy Birthday Gunduli 💖</title>
+<title>Gunduli — A Little Birthday Trouble 💗</title>
 <style>
-:root{--pink:#ff4d6d;--soft:#fff0f3;--ink:#3a2f35;--gold:#e9a23b}
-*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,Segoe UI,sans-serif;background:linear-gradient(135deg,#fff4f6,#ffe2ea);color:var(--ink);text-align:center;overflow-x:hidden}
-.modal{position:fixed;inset:0;background:rgba(255,244,246,.98);display:grid;place-items:center;z-index:20;padding:24px}.modal>div{max-width:520px}.btn,.music{border:0;border-radius:999px;padding:14px 22px;background:var(--pink);color:#fff;font-weight:800;cursor:pointer;box-shadow:0 10px 25px #ff4d6d44}.modal p{color:#6d6268}
-main{max-width:950px;margin:auto;padding:32px 16px 80px}h1{font-size:clamp(2.1rem,8vw,4.5rem);color:var(--pink);margin:12px}.sub{font-size:1.08rem;color:#6d6268}
-.card{background:#fff;border:3px solid #ffcbd5;border-radius:28px;padding:24px;margin:24px auto;box-shadow:0 12px 30px #ff4d6d1c}.scene{position:relative;height:340px;overflow:hidden;border-radius:22px;background:linear-gradient(#fff9fa,#fff1f5)}
-.couple-svg{width:min(100%,760px);height:100%;display:block;margin:auto}.giraffe-sway{transform-origin:145px 265px;animation:sway 3s ease-in-out infinite}.panda-bounce{transform-origin:315px 285px;animation:bounce 2.2s ease-in-out infinite}.float-heart{animation:heart 1.7s ease-in-out infinite}
-@keyframes sway{0%,100%{transform:rotate(-2deg) translateY(0)}50%{transform:rotate(2deg) translateY(-7px)}}@keyframes bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}@keyframes heart{50%{transform:scale(1.25)}}
-.cake{font-size:92px;cursor:pointer;user-select:none;transition:transform .2s}.cake:active{transform:scale(.9)}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}.reason{text-align:left;padding:18px;background:#fff8fa;border-radius:18px}.jokes button{margin:6px;background:#ffe0e8;color:var(--pink);border:2px dashed var(--pink);border-radius:15px;padding:11px;font-weight:700;cursor:pointer}
-.final{min-height:380px;display:grid;place-items:center;background:radial-gradient(circle,#fff,#ffd1dc);position:relative;overflow:hidden}.fire{font-size:42px;animation:boom 1.5s infinite}.final h2{font-size:clamp(2.2rem,9vw,5rem);color:var(--pink);margin:6px}@keyframes boom{50%{transform:scale(1.18);opacity:.7}}
-.music{position:fixed;right:15px;bottom:15px;z-index:30;background:#fff;color:var(--pink);border:2px solid var(--pink);padding:10px 16px}
-.status{font-size:.9rem;color:#8b747d;min-height:22px}
-@media(max-width:600px){.scene{height:300px}.music{right:10px;bottom:10px}}
+:root{--pink:#ff4770;--rose:#ff8fab;--cream:#fff8f7;--ink:#3b2f35;--gold:#f2b84b}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:system-ui,-apple-system,Segoe UI,sans-serif;color:var(--ink);background:linear-gradient(135deg,#fff7f8,#ffe5ed);overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;background-image:radial-gradient(#ff8fab55 1px,transparent 1px);background-size:22px 22px;opacity:.25;z-index:-1}
+button{font:inherit}
+.modal{position:fixed;inset:0;display:grid;place-items:center;padding:24px;background:rgba(255,247,248,.97);z-index:100;transition:.7s}
+.modal.hide{opacity:0;visibility:hidden;transform:scale(1.06)}
+.modal-box{text-align:center;max-width:570px}
+.burst-heart{font-size:64px;animation:heartbeat 1.4s infinite}
+h1{font-size:clamp(2.4rem,9vw,5rem);color:var(--pink);margin:.2em 0}
+h2{color:#d94a68}
+.btn,.music-btn{border:0;border-radius:999px;padding:14px 24px;background:linear-gradient(135deg,#ff4770,#ff7d9a);color:#fff;font-weight:900;cursor:pointer;box-shadow:0 12px 25px #ff477044;transition:.25s}
+.btn:hover,.music-btn:hover{transform:translateY(-3px) scale(1.02)}
+main{max-width:1000px;margin:auto;padding:35px 16px 100px}
+.hero{text-align:center;padding:35px 10px 10px}
+.subtitle{font-size:1.15rem;color:#705f67}
+.badge{display:inline-block;background:#fff;border:2px solid #ffd0da;border-radius:999px;padding:8px 14px;color:var(--pink);font-weight:800}
+.card{background:rgba(255,255,255,.92);border:2px solid #ffcbd6;border-radius:30px;padding:24px;margin:24px auto;box-shadow:0 18px 45px #d94a6818;position:relative;overflow:hidden}
+.card:after{content:"♥";position:absolute;right:18px;top:10px;color:#ffb3c1;font-size:22px;animation:float 3s infinite}
+.scene{height:390px;border-radius:24px;background:linear-gradient(#fffaf9,#ffeef3);position:relative;overflow:hidden}
+.scene:before{content:"☁️";position:absolute;left:7%;top:10%;font-size:42px;animation:cloud 9s linear infinite}
+.scene:after{content:"☁️";position:absolute;right:8%;top:22%;font-size:32px;animation:cloud 12s linear infinite reverse}
+svg{width:100%;height:100%;display:block}
+.giraffe{transform-origin:145px 275px;animation:giraffeDance 3s ease-in-out infinite}
+.panda{transform-origin:350px 285px;animation:pandaHop 1.9s ease-in-out infinite}
+.heartFloat{animation:heartFloat 2s ease-in-out infinite}
+.spark{animation:spark 1.7s ease-in-out infinite}
+@keyframes giraffeDance{0%,100%{transform:rotate(-2deg) translateY(0)}50%{transform:rotate(2deg) translateY(-9px)}}
+@keyframes pandaHop{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-15px) rotate(-2deg)}}
+@keyframes heartFloat{50%{transform:translateY(-15px) scale(1.2)}}
+@keyframes spark{50%{opacity:.25;transform:scale(1.5)}}
+@keyframes cloud{50%{transform:translateX(100px)}}
+@keyframes heartbeat{50%{transform:scale(1.2)}}
+@keyframes float{50%{transform:translateY(-8px)}}
+.cake-wrap{text-align:center}
+.cake{font-size:100px;cursor:pointer;display:inline-block;animation:cakeFloat 2s infinite}
+@keyframes cakeFloat{50%{transform:translateY(-8px) rotate(2deg)}}
+.cake:active{transform:scale(.88)}
+.candle{font-size:32px;display:block;margin-bottom:-15px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:15px}
+.reason{padding:18px;background:#fff8fa;border-radius:20px;border:1px solid #ffd6df;transition:.3s}
+.reason:hover{transform:translateY(-7px) rotate(-1deg);box-shadow:0 15px 25px #ff477022}
+.jokes{text-align:center}
+.jokes button{margin:6px;padding:12px 15px;border:2px dashed var(--pink);border-radius:16px;background:#fff;color:var(--pink);font-weight:800;cursor:pointer;transition:.25s}
+.jokes button:hover{transform:rotate(-2deg) translateY(-3px);background:#fff0f4}
+.reply{min-height:35px;font-weight:800;color:#d94a68}
+.flirty{background:linear-gradient(135deg,#fff0f4,#fff);text-align:center}
+.flirty-line{font-size:clamp(1.4rem,4vw,2rem);font-weight:900;color:#d94a68;min-height:70px;display:grid;place-items:center}
+.next{margin-top:12px;border:0;border-radius:999px;padding:10px 17px;background:#ffe1e8;color:#d94a68;font-weight:900;cursor:pointer}
+.final{min-height:430px;display:grid;place-items:center;text-align:center;background:radial-gradient(circle,#fff,#ffd0dc)}
+.final h2{font-size:clamp(2.4rem,9vw,5.5rem);color:var(--pink);margin:8px}
+.fireworks{font-size:46px;animation:firework 1.4s infinite}
+@keyframes firework{50%{transform:scale(1.25);filter:brightness(1.2)}}
+.music-btn{position:fixed;right:16px;bottom:16px;z-index:90;background:#fff;color:var(--pink);border:2px solid var(--pink);box-shadow:0 8px 25px #ff477033}
+.music-note{position:fixed;bottom:72px;right:22px;color:var(--pink);font-size:25px;pointer-events:none;animation:musicNote 2s linear infinite}
+@keyframes musicNote{0%{opacity:0;transform:translateY(20px)}30%{opacity:1}100%{opacity:0;transform:translateY(-70px) translateX(25px)}}
+.confetti{position:fixed;top:-20px;font-size:20px;z-index:80;pointer-events:none;animation:fall linear forwards}
+@keyframes fall{to{transform:translateY(110vh) rotate(720deg);opacity:0}}
+.hidden{display:none}
+.small{color:#806c74;font-size:.92rem}
+@media(max-width:600px){.scene{height:320px}.card{padding:18px}.music-btn{right:10px;bottom:10px}}
 </style>
 </head>
 <body>
+
 <div class="modal" id="welcome">
-  <div><div style="font-size:55px;color:var(--pink);animation:heart 1.7s infinite">♥</div>
-  <h1>For My Gunduli 💖</h1><p>Something small, cute and made just for you…</p>
-  <button class="btn" onclick="startSurprise()">Open Your Birthday Surprise 🎁</button>
-  <p id="musicStatus" class="status">Music will start when you open the surprise.</p></div>
+  <div class="modal-box">
+    <div class="burst-heart">💗</div>
+    <div class="badge">CLASSIFIED: GUNDULI ONLY</div>
+    <h1>Hey, Birthday Girl 👀</h1>
+    <p style="font-size:1.15rem">I made you something dangerously cute.</p>
+    <p class="small">Side effects may include smiling, blushing and missing your favourite Ziraaf. 🦒</p>
+    <button class="btn" onclick="openSurprise()">Open Your Birthday Surprise 🎁</button>
+    <p id="musicHint" class="small">Your music will try to start after you open it.</p>
+  </div>
 </div>
 
 <main>
-<h1>Happy Birthday, Gunduli! 🐼🦒❤️</h1>
-<p class="sub">To the cutest, fiercest little girl who owns the Giraffe's heart.</p>
-
-<section class="card">
-<div class="scene">
-<svg class="couple-svg" viewBox="0 0 520 340" aria-label="Cute romantic giraffe and panda">
-<g class="giraffe-sway">
-<ellipse cx="150" cy="310" rx="72" ry="14" fill="#f3cbd4" opacity=".45"/>
-<path d="M116 275 C108 230 111 185 119 145 L125 72 Q128 52 145 52 Q162 52 165 72 L170 145 C178 186 181 231 174 275Z" fill="#f6c86e" stroke="#8c5a2f" stroke-width="4"/>
-<circle cx="133" cy="102" r="9" fill="#b77a3e"/><circle cx="155" cy="155" r="10" fill="#b77a3e"/><circle cx="130" cy="205" r="11" fill="#b77a3e"/><circle cx="158" cy="250" r="9" fill="#b77a3e"/>
-<path d="M112 72 Q92 55 101 40 Q112 26 128 42 L140 54" fill="#f6c86e" stroke="#8c5a2f" stroke-width="4"/>
-<path d="M165 72 Q184 55 176 40 Q166 26 150 42 L140 54" fill="#f6c86e" stroke="#8c5a2f" stroke-width="4"/>
-<path d="M116 78 Q112 32 140 25 Q168 32 165 78 Q157 98 140 100 Q123 98 116 78Z" fill="#f6c86e" stroke="#8c5a2f" stroke-width="4"/>
-<circle cx="129" cy="67" r="5" fill="#3a2f35"/><circle cx="151" cy="67" r="5" fill="#3a2f35"/>
-<circle cx="140" cy="81" r="4" fill="#3a2f35"/><path d="M131 88 Q140 96 149 88" fill="none" stroke="#3a2f35" stroke-width="3" stroke-linecap="round"/>
-<path d="M140 25V10" stroke="#8c5a2f" stroke-width="5"/><circle cx="138" cy="8" r="6" fill="#8c5a2f"/><path d="M140 25V10" stroke="#8c5a2f" stroke-width="5"/><circle cx="142" cy="8" r="6" fill="#8c5a2f"/>
-<path d="M112 170 Q88 188 77 210" fill="none" stroke="#8c5a2f" stroke-width="10" stroke-linecap="round"/><path d="M170 170 Q195 185 207 204" fill="none" stroke="#8c5a2f" stroke-width="10" stroke-linecap="round"/>
-</g>
-
-<g class="panda-bounce">
-<ellipse cx="345" cy="310" rx="72" ry="14" fill="#f3cbd4" opacity=".45"/>
-<ellipse cx="345" cy="245" rx="62" ry="72" fill="#fff" stroke="#2f2b30" stroke-width="5"/>
-<circle cx="345" cy="165" r="65" fill="#fff" stroke="#2f2b30" stroke-width="5"/>
-<circle cx="300" cy="125" r="22" fill="#2f2b30"/><circle cx="390" cy="125" r="22" fill="#2f2b30"/>
-<ellipse cx="319" cy="163" rx="18" ry="28" fill="#2f2b30" transform="rotate(25 319 163)"/><ellipse cx="371" cy="163" rx="18" ry="28" fill="#2f2b30" transform="rotate(-25 371 163)"/>
-<circle cx="320" cy="162" r="6" fill="#fff"/><circle cx="370" cy="162" r="6" fill="#fff"/>
-<circle cx="345" cy="180" r="7" fill="#2f2b30"/><path d="M332 192 Q345 203 358 192" fill="none" stroke="#2f2b30" stroke-width="4" stroke-linecap="round"/>
-<path d="M292 230 Q265 248 260 275" fill="none" stroke="#2f2b30" stroke-width="14" stroke-linecap="round"/><path d="M398 230 Q425 248 430 275" fill="none" stroke="#2f2b30" stroke-width="14" stroke-linecap="round"/>
-<path d="M319 295 Q345 280 371 295" fill="none" stroke="#2f2b30" stroke-width="12" stroke-linecap="round"/>
-</g>
-<text x="245" y="95" font-size="42" fill="#ff4d6d" class="float-heart">♥</text>
-</svg>
-</div>
-<p><b>The tall calm Ziraaf & his tiny, adorably energetic Panda forever! 🦒💕🐼</b></p>
+<section class="hero">
+  <div class="badge">FOR MY GUNDULI 💌</div>
+  <h1>Happy Birthday, You Little Menace. ❤️</h1>
+  <p class="subtitle">You somehow made being adorable look like a full-time job.</p>
 </section>
 
-<section class="card"><h2>🎂 Make a Birthday Wish</h2><div class="cake" onclick="wish()">🎂</div><p id="wish">Tap the cake! ✨</p></section>
-<section class="card jokes"><h2>Gunduli's Special Investigation Bureau 🕵️‍♀️</h2>
-<button onclick="j('🐾 Bouncing Walk: scientifically proven to make Ziraaf smile.')">Bouncing Walk 🐾</button>
-<button onclick="j('💢 Angry Mode: 0.1% scary, 100% cute.')">Angry Mode 💢</button>
-<button onclick="j('🔋 Hangout Stamina: apparently unlimited.')">Hangout Stamina 🔋</button>
-<button onclick="j('🍟 One bite = 80% of my fries. Still worth it.')">My French Fries 🍟</button>
-<p id="joke">Click one… 😌</p></section>
+<section class="card">
+  <div class="scene">
+  <svg viewBox="0 0 520 390" aria-label="Animated cute giraffe and panda">
+    <g class="giraffe">
+      <ellipse cx="145" cy="350" rx="82" ry="13" fill="#eabac6" opacity=".45"/>
+      <path d="M110 310C105 270 110 215 120 160L125 75Q128 52 145 52Q162 52 165 75L171 160C181 215 186 270 180 310Z" fill="#f7cb70" stroke="#8b5b32" stroke-width="4"/>
+      <circle cx="132" cy="115" r="10" fill="#b8793c"/><circle cx="157" cy="172" r="11" fill="#b8793c"/><circle cx="128" cy="230" r="12" fill="#b8793c"/><circle cx="158" cy="285" r="10" fill="#b8793c"/>
+      <path d="M120 76Q98 58 106 43Q115 28 132 45L143 55" fill="#f7cb70" stroke="#8b5b32" stroke-width="4"/>
+      <path d="M166 76Q188 58 180 43Q171 28 154 45L143 55" fill="#f7cb70" stroke="#8b5b32" stroke-width="4"/>
+      <path d="M116 80Q114 34 143 26Q172 34 169 80Q160 101 143 103Q126 101 116 80Z" fill="#f7cb70" stroke="#8b5b32" stroke-width="4"/>
+      <circle cx="131" cy="68" r="5" fill="#3b2f35"/><circle cx="155" cy="68" r="5" fill="#3b2f35"/>
+      <circle cx="143" cy="82" r="4" fill="#3b2f35"/><path d="M133 89Q143 98 153 89" fill="none" stroke="#3b2f35" stroke-width="3" stroke-linecap="round"/>
+      <path d="M143 27V11M143 27V11" stroke="#8b5b32" stroke-width="5"/><circle cx="141" cy="9" r="6" fill="#8b5b32"/><circle cx="145" cy="9" r="6" fill="#8b5b32"/>
+      <path d="M113 195Q84 215 76 244M174 195Q202 214 212 238" fill="none" stroke="#8b5b32" stroke-width="11" stroke-linecap="round"/>
+    </g>
 
-<section class="card"><h2>6 Little Things I Love About You 💌</h2><div class="grid">
-<div class="reason"><h3>1. That Cute Bouncing Walk</h3><p>Your cheerful little bounce instantly brightens my world.</p></div>
-<div class="reason"><h3>2. Your Tiny Angry Tantrums</h3><p>You try to look scary, but somehow become even cuter.</p></div>
-<div class="reason"><h3>3. Endless Hangout Energy</h3><p>Every ordinary street becomes an adventure with you.</p></div>
-<div class="reason"><h3>4. Your Pure Heart</h3><p>Behind every cute drama is the warmest heart.</p></div>
-<div class="reason"><h3>5. That Contagious Laugh</h3><p>Your laugh is one of my favorite sounds in the universe.</p></div>
-<div class="reason"><h3>6. Just Being My Gunduli</h3><p>Loving you is effortless, and having you is my blessing.</p></div>
-</div></section>
+    <g class="panda">
+      <ellipse cx="350" cy="350" rx="80" ry="13" fill="#eabac6" opacity=".45"/>
+      <ellipse cx="350" cy="278" rx="65" ry="78" fill="#fff" stroke="#2f2b30" stroke-width="5"/>
+      <circle cx="350" cy="190" r="67" fill="#fff" stroke="#2f2b30" stroke-width="5"/>
+      <circle cx="304" cy="146" r="23" fill="#2f2b30"/><circle cx="396" cy="146" r="23" fill="#2f2b30"/>
+      <ellipse cx="323" cy="187" rx="19" ry="29" fill="#2f2b30" transform="rotate(24 323 187)"/><ellipse cx="377" cy="187" rx="19" ry="29" fill="#2f2b30" transform="rotate(-24 377 187)"/>
+      <circle cx="324" cy="186" r="6" fill="#fff"/><circle cx="376" cy="186" r="6" fill="#fff"/>
+      <circle cx="350" cy="204" r="7" fill="#2f2b30"/><path d="M336 216Q350 229 364 216" fill="none" stroke="#2f2b30" stroke-width="4" stroke-linecap="round"/>
+      <path d="M294 262Q265 280 258 311M406 262Q435 280 442 311" fill="none" stroke="#2f2b30" stroke-width="15" stroke-linecap="round"/>
+      <path d="M322 333Q350 315 378 333" fill="none" stroke="#2f2b30" stroke-width="13" stroke-linecap="round"/>
+    </g>
 
-<section class="card final"><div><div class="fire">🎆 💥 🎇 💖 🎆</div><h2>Happy Birthday, Gunduli! ❤️</h2><p>May your smile stay this bright, your heart stay this happy, and may we keep making beautiful little memories together. 💕</p><div class="fire">💖 🎆 💥 🎇 💖</div></div></section>
+    <text x="235" y="115" font-size="44" fill="#ff4770" class="heartFloat">♥</text>
+    <text x="215" y="145" font-size="18" fill="#ff9ab0" class="spark">✦</text>
+    <text x="405" y="90" font-size="20" fill="#ff9ab0" class="spark">✦</text>
+  </svg>
+  </div>
+  <p><b>Official relationship status:</b> one tall Ziraaf completely distracted by one tiny Panda. 🦒💘🐼</p>
+</section>
+
+<section class="card flirty">
+  <h2>💘 Things I Would Never Admit Out Loud</h2>
+  <div class="flirty-line" id="flirtyLine">Loading dangerous levels of flirting…</div>
+  <button class="next" onclick="nextFlirty()">Give me another one 😏</button>
+</section>
+
+<section class="card">
+  <h2>🎂 Blow the Candle & Make a Wish</h2>
+  <div class="cake-wrap">
+    <div class="candle" id="flame">🔥</div>
+    <div class="cake" onclick="blowCandle()">🎂</div>
+  </div>
+  <p id="wish">Tap the cake to blow the candle. ✨</p>
+</section>
+
+<section class="card jokes">
+  <h2>🕵️ Gunduli Investigation Bureau</h2>
+  <p>Choose your crime. I already know you're guilty of being cute.</p>
+  <button onclick="j('🐾 Bouncing Walk detected. Ziraaf has officially lost focus.')">Bouncing Walk 🐾</button>
+  <button onclick="j('💢 Angry Mode detected. Threat level: adorable.')">Angry Mode 💢</button>
+  <button onclick="j('🔋 Hangout Stamina detected. One more plan? Obviously.')">Hangout Stamina 🔋</button>
+  <button onclick="j('🍟 French Fries theft detected. Punishment: you owe me another hangout.')">My French Fries 🍟</button>
+  <p class="reply" id="joke">Your file is suspiciously cute…</p>
+</section>
+
+<section class="card">
+  <h2>💌 Six Little Things I Love About You</h2>
+  <div class="grid">
+    <div class="reason"><h3>1. That Bouncing Walk</h3><p>You don't walk into a room. You arrive with your own little soundtrack.</p></div>
+    <div class="reason"><h3>2. Your Tiny Angry Face</h3><p>You try so hard to look scary. My problem is that it makes me smile.</p></div>
+    <div class="reason"><h3>3. Your Endless Energy</h3><p>With you, even a boring road somehow turns into a memory.</p></div>
+    <div class="reason"><h3>4. Your Soft Heart</h3><p>Under all the drama is one of the sweetest hearts I know.</p></div>
+    <div class="reason"><h3>5. Your Laugh</h3><p>Honestly unfair. One laugh and suddenly my entire mood changes.</p></div>
+    <div class="reason"><h3>6. Just You</h3><p>I don't need a perfect day. Give me a normal day with you.</p></div>
+  </div>
+</section>
+
+<section class="card final">
+  <div>
+    <div class="fireworks">🎆 💥 🎇 💗 🎆</div>
+    <h2>HAPPY BIRTHDAY, GUNDULI! ❤️</h2>
+    <p style="font-size:1.15rem">May this year give you everything you secretly wish for…</p>
+    <p><b>and may I continue being your favourite Ziraaf. 😉🦒</b></p>
+    <div class="fireworks">💗 🎇 💥 🎆 💗</div>
+  </div>
+</section>
 </main>
 
-<button class="music" onclick="toggleMusic()" id="musicBtn">🎵 Play Music</button>
-<audio id="song" preload="auto" playsinline crossorigin="anonymous">
+<button class="music-btn" id="musicBtn" onclick="toggleMusic()">🎵 Play Music</button>
+<div id="note1" class="music-note hidden">♪</div>
+<audio id="song" preload="metadata" playsinline>
   <source src="https://drive.google.com/uc?export=download&id=1rdapeErJwae-DKk8g6mK27Uez0ZNfTr3" type="audio/mpeg">
 </audio>
 
 <script>
 const song=document.getElementById('song');
 const musicBtn=document.getElementById('musicBtn');
-const musicStatus=document.getElementById('musicStatus');
+const lines=[
+  "I was going to write something normal… then I remembered you're my weakness. 😏",
+  "You're dangerously cute for someone who steals my fries this confidently. 🍟❤️",
+  "If being distracted by you were a profession, I'd be employee of the year.",
+  "I don't need Google Maps. Somehow I always end up wanting to go wherever you are.",
+  "You're my favourite notification. Even when it's just 'hmm' 😂💗",
+  "I blame your smile for at least 73% of my unnecessary happiness.",
+  "If I had one birthday wish for myself, it'd be more random days with you.",
+  "You're tiny, dramatic, adorable… unfortunately, exactly my type. 😌",
+  "I could make a very long list of things I like about you. Your smile is still number one.",
+  "Official warning: spending too much time with you may cause permanent attachment. 💘"
+];
+let li=0, wished=false;
 
-async function playMusic(){
-  try{
-    song.load();
-    await song.play();
-    musicBtn.textContent='🎵 Music: ON';
-    musicStatus.textContent='Music is playing 💕';
-  }catch(e){
-    musicBtn.textContent='🎵 Tap to Play Music';
-    musicStatus.textContent='Tap the Music button once if your browser blocked autoplay.';
-  }
-}
-function startSurprise(){
-  document.getElementById('welcome').style.display='none';
+function openSurprise(){
+  document.getElementById('welcome').classList.add('hide');
+  setTimeout(()=>document.getElementById('welcome').style.display='none',700);
   playMusic();
+  confetti(55);
+}
+function playMusic(){
+  song.play().then(()=>{
+    musicBtn.textContent='🎵 Music: ON';
+    document.getElementById('musicHint').textContent='Music is playing 💕';
+    document.getElementById('note1').classList.remove('hidden');
+  }).catch(()=>{
+    musicBtn.textContent='🎵 Tap for Music';
+    const h=document.getElementById('musicHint');
+    if(h)h.textContent='If music does not start, tap “Play Music” once.';
+  });
 }
 function toggleMusic(){
-  if(song.paused) playMusic();
-  else {song.pause();musicBtn.textContent='🎵 Music: OFF';musicStatus.textContent='Music paused.';}
+  if(song.paused)playMusic();
+  else{song.pause();musicBtn.textContent='🎵 Music: OFF';document.getElementById('note1').classList.add('hidden')}
 }
-song.addEventListener('error',()=>{musicStatus.textContent='The music file could not be loaded. Please check the Google Drive sharing permission.';});
-function wish(){document.getElementById('wish').textContent='✨ Wish sent to the stars! Happy Birthday, my Panda! ❤️🎉';document.body.animate([{filter:'brightness(1)'},{filter:'brightness(1.15)'},{filter:'brightness(1)'}],700)}
-function j(t){document.getElementById('joke').textContent=t}
+song.addEventListener('error',()=>{musicBtn.textContent='🎵 Music unavailable';});
+function nextFlirty(){
+  document.getElementById('flirtyLine').textContent=lines[li++%lines.length];
+}
+function blowCandle(){
+  document.getElementById('flame').textContent='💨';
+  document.getElementById('wish').textContent='Wish officially launched into the universe. ✨❤️';
+  if(!wished){wished=true;confetti(90)}
+}
+function j(t){document.getElementById('joke').textContent=t;confetti(18)}
+function confetti(n){
+  const symbols=['💗','💕','✨','🌸','🎀','💖'];
+  for(let i=0;i<n;i++){
+    const s=document.createElement('span');s.className='confetti';
+    s.textContent=symbols[Math.floor(Math.random()*symbols.length)];
+    s.style.left=Math.random()*100+'vw';
+    s.style.animationDuration=(2.5+Math.random()*3)+'s';
+    s.style.animationDelay=(Math.random()*.4)+'s';
+    document.body.appendChild(s);
+    setTimeout(()=>s.remove(),6000);
+  }
+}
+nextFlirty();
+setInterval(()=>{if(!document.hidden)nextFlirty()},7000);
 </script>
-</body></html>
+</body>
+</html>
